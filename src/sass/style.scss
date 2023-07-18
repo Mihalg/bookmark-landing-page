@@ -57,6 +57,15 @@ svg {
 	}
 }
 
+.bg-figure {
+	position: absolute;
+	width: 80vw;
+	background-color: hsl(231, 69%, 60%);
+	border-radius: 500px 0px 0px 500px;
+	z-index: -1;
+	aspect-ratio: 1.8 / 1;
+}
+
 .container {
 	width: 100%;
 	max-width: 1200px;
@@ -66,6 +75,7 @@ svg {
 
 .section-padding {
 	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 
 .heading {
@@ -179,6 +189,7 @@ svg {
 
 // -----HEADER-----
 .header {
+	position: relative;
 	text-align: center;
 
 	img {
@@ -209,6 +220,11 @@ svg {
 				}
 			}
 		}
+	}
+
+	.bg-figure {
+		left: 20vw;
+		top: 10rem;
 	}
 }
 
@@ -263,6 +279,7 @@ svg {
 	}
 
 	.feature-container {
+		position: relative;
 		margin-top: 4rem;
 		text-align: center;
 
@@ -288,6 +305,12 @@ svg {
 					margin-top: 2rem;
 				}
 			}
+		}
+
+		.bg-figure {
+			top: 6rem;
+			left: -3rem;
+			transform: rotateY(180deg);
 		}
 	}
 }
@@ -377,7 +400,7 @@ svg {
 				}
 
 				svg {
-					stroke: #5267DF;
+					stroke: #5267df;
 					transition: transform 0.3s, stroke 0.3s;
 				}
 			}
@@ -511,9 +534,19 @@ footer {
 			gap: 3rem;
 		}
 	}
+
+	.attribution{
+		background-color: hsl(229, 31%, 21%);
+	}
 }
 
 // -----MEDIA-----
+@media (min-width: 36em) {
+	.bg-figure {
+		aspect-ratio: 1.5 / 1;
+	}
+}
+
 @media (min-width: 62em) {
 	html {
 		font-size: 67.5%;
@@ -592,6 +625,15 @@ footer {
 			justify-content: flex-start;
 			gap: 1rem;
 		}
+
+		.bg-figure {
+			aspect-ratio: 4 / 1;
+			left: 30vw;
+			top: auto;
+			right: auto;
+			bottom: 2rem;
+			min-height: 30rem;
+		}
 	}
 
 	.features {
@@ -644,6 +686,15 @@ footer {
 						margin-top: 1.6rem;
 					}
 				}
+			}
+
+			.bg-figure {
+				left: auto;
+				right: 30vw;
+				top: auto;
+				bottom: -4rem;
+				aspect-ratio: 4.4 / 1;
+				min-height: 30rem;
 			}
 		}
 	}
